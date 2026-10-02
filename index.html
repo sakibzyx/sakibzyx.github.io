@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Md Sakibul Hasan, Civil Engineering student at DUET."
+    />
+    <link
+      rel="icon"
+      type="image/webp"
+      href="assets/img/md-sakibul-hasan-bgr.webp"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/md-sakibul-hasan-bgr.webp"
+    />
     <title>Md Sakibul Hasan - Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -46,22 +59,47 @@
         font-weight: 500;
       }
 
-      .cv-box {
+      /* Navbar links inside rectangle boxes */
+      .navbar-nav {
+        gap: 8px;
+        align-items: center;
+      }
+
+      .navbar-dark .navbar-nav .nav-link.nav-box {
         display: inline-block;
-        padding: 4px 16px;
-        border: 2px solid #fff;
+        padding: 5px 16px;
+        border: 2px solid rgba(255, 255, 255, 0.85);
         border-radius: 4px;
         color: #fff;
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.4;
-        text-decoration: none;
         transition: all 0.3s ease;
       }
 
-      .cv-box:hover {
+      .navbar-dark .navbar-nav .nav-link.nav-box:hover,
+      .navbar-dark .navbar-nav .nav-link.nav-box:focus-visible {
         background-color: #fff;
         color: var(--primary-color);
+        transform: translateY(-2px);
+      }
+
+      .navbar-dark .navbar-nav .nav-link.nav-box.active {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: #fff;
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+          padding-top: 12px;
+          align-items: stretch;
+        }
+
+        .navbar-dark .navbar-nav .nav-link.nav-box {
+          display: block;
+          text-align: center;
+        }
       }
 
       .hero-section {
@@ -231,15 +269,6 @@
               alt="Sakibul Hasan logo"
             />
           </a>
-
-          <a
-            href="https://sakibzyx.github.io/cv/index"
-            class="cv-box"
-            target="_blank"
-            rel="noopener"
-          >
-            CV
-          </a>
         </div>
         <button
           class="navbar-toggler"
@@ -254,11 +283,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link nav-box" href="https://sakibzyx.github.io/cv/index" target="_blank" rel="noopener">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-box" href="https://sakibzyx.github.io/#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-box" href="https://sakibzyx.github.io/#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-box" href="https://sakibzyx.github.io/#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-box" href="https://sakibzyx.github.io/#activities">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-box" href="https://sakibzyx.github.io/#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -521,6 +563,48 @@
           heroSlides[heroSlideIndex].classList.add("active");
         }, 4000);
       }
+
+      // Navbar: smooth scroll + highlight the current section
+      const navLinks = [...document.querySelectorAll(".nav-box")].filter(
+        (a) => a.hash
+      );
+      const navSections = navLinks
+        .map((a) => document.getElementById(a.hash.slice(1)))
+        .filter(Boolean);
+      const navCollapse = document.getElementById("navbarNav");
+
+      function updateActiveLink() {
+        const y = window.scrollY + 120;
+        let current = "";
+        navSections.forEach((sec) => {
+          if (sec.offsetTop <= y) current = sec.id;
+        });
+        const atBottom =
+          window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 2;
+        if (atBottom && navSections.length) {
+          current = navSections[navSections.length - 1].id;
+        }
+        navLinks.forEach((a) =>
+          a.classList.toggle("active", a.hash === "#" + current)
+        );
+      }
+
+      navLinks.forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const target = document.getElementById(a.hash.slice(1));
+          if (!target) return; // fall back to the normal link
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+          history.pushState(null, "", a.hash);
+          if (navCollapse.classList.contains("show")) {
+            bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
+          }
+        });
+      });
+
+      window.addEventListener("scroll", updateActiveLink);
+      updateActiveLink();
 
       // Back to top button
       const backToTopButton = document.querySelector(".back-to-top");
