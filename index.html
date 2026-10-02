@@ -146,12 +146,14 @@
         font-weight: 500;
       }
 
+      /* Navbar links inside rectangle boxes */
       .navbar-nav {
         gap: 8px;
         align-items: center;
       }
 
-      .navbar-dark .navbar-nav .nav-link.nav-box {
+      .navbar-dark .navbar-nav .nav-link.nav-box,
+      .nav-cv-box {
         display: inline-block;
         padding: 5px 16px;
         border: 2px solid rgba(255, 255, 255, 0.85);
@@ -160,11 +162,14 @@
         font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.4;
+        text-decoration: none;
         transition: all 0.3s ease;
       }
 
       .navbar-dark .navbar-nav .nav-link.nav-box:hover,
-      .navbar-dark .navbar-nav .nav-link.nav-box:focus-visible {
+      .navbar-dark .navbar-nav .nav-link.nav-box:focus-visible,
+      .nav-cv-box:hover,
+      .nav-cv-box:focus-visible {
         background-color: #fff;
         color: var(--primary-color);
         transform: translateY(-2px);
@@ -347,14 +352,20 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main Navigation">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 mb-0" href="https://sakibzyx.github.io/" aria-label="Home">
-          <img
-            src="assets/img/md-sakibul-hasan.webp"
-            height="36"
-            width="36"
-            alt="Md Sakibul Hasan Portfolio Logo"
-          />
-        </a>
+        <!-- Logo & CV Box on Left -->
+        <div class="d-flex align-items-center gap-3">
+          <a class="navbar-brand d-flex align-items-center mb-0 me-0" href="https://sakibzyx.github.io/" aria-label="Home">
+            <img
+              src="assets/img/md-sakibul-hasan.webp"
+              height="36"
+              width="36"
+              alt="Md Sakibul Hasan Portfolio Logo"
+            />
+          </a>
+          <!-- Rectangle CV Box next to logo -->
+          <a class="nav-cv-box" href="https://sakibzyx.github.io/cv/index" target="_blank" rel="noopener">CV</a>
+        </div>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -366,22 +377,15 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Right Side Nav Items -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link nav-box" href="https://sakibzyx.github.io/cv/index" target="_blank" rel="noopener">CV</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link nav-box" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-box" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-box" href="#certifications">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-box" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-box" href="#experience">Experience</a>
@@ -577,7 +581,7 @@
               <div class="card p-4 h-100">
                 <h3 class="h5 mb-3"><i class="bi bi-pencil-ruler text-primary me-2"></i>Design &amp; Drafting Tools</h3>
                 <div>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">AutoCAD</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">AutoCAD</span>
                 </div>
               </div>
             </div>
@@ -585,7 +589,7 @@
               <div class="card p-4 h-100">
                 <h3 class="h5 mb-3"><i class="bi bi-building text-primary me-2"></i>Structural Analysis Tools</h3>
                 <div>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">ETABS</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">ETABS</span>
                 </div>
               </div>
             </div>
@@ -593,8 +597,8 @@
               <div class="card p-4 h-100">
                 <h3 class="h5 mb-3"><i class="bi bi-code-slash text-primary me-2"></i>Programming Languages</h3>
                 <div>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">Python</span>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">LaTeX</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">Python</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">LaTeX</span>
                 </div>
               </div>
             </div>
@@ -602,9 +606,9 @@
               <div class="card p-4 h-100">
                 <h3 class="h5 mb-3"><i class="bi bi-file-earmark-text text-primary me-2"></i>Productivity Tools</h3>
                 <div>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">MS Word</span>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">MS Excel</span>
-                  <span class="badge me-2 mb-2 fw-normal px-3 py-2">MS PowerPoint</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">MS Word</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">MS Excel</span>
+                  <span class="badge bg-primary me-2 mb-2 fw-normal px-3 py-2">MS PowerPoint</span>
                 </div>
               </div>
             </div>
