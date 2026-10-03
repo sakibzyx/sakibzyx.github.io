@@ -272,6 +272,58 @@
         box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
       }
 
+      /* Technical Skills cards: fixed, no movement on hover */
+      #skills .card:hover {
+        transform: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Education table (degrees style) */
+      .edu-card:hover {
+        transform: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      }
+
+      .edu-card {
+        border-radius: 4px;
+        background: #fff;
+      }
+
+      .edu-card-header {
+        padding: 18px 22px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #555;
+        border-bottom: 1px solid #eee;
+      }
+
+      .edu-card-body {
+        padding: 18px 20px 22px;
+      }
+
+      .edu-table {
+        font-size: 0.88rem;
+        color: #555;
+        border-color: #e3e3e3;
+      }
+
+      .edu-table thead th {
+        background-color: #f5f5f5;
+        color: #555;
+        font-weight: 600;
+        padding: 10px 10px;
+        border-color: #e3e3e3;
+      }
+
+      .edu-table td {
+        padding: 10px;
+        border-color: #e3e3e3;
+      }
+
+      .edu-table tbody tr:hover {
+        background-color: #fafafa;
+      }
+
       /* Role timeline (Co-curricular) */
       .role-timeline {
         position: relative;
@@ -483,19 +535,38 @@
       <section id="education" class="py-5 bg-light">
         <div class="container">
           <h2 class="section-title">Education</h2>
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="card p-4 h-100">
-                <h3 class="h4">BSc in Civil Engineering</h3>
-                <p class="text-muted mb-2">Dhaka University of Engineering &amp; Technology (DUET), Gazipur, Bangladesh</p>
-                <p class="mb-0 fw-semibold text-primary"><time datetime="2024-12">December 2024</time> – Present</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card p-4 h-100">
-                <h3 class="h4">Diploma in Civil Engineering</h3>
-                <p class="text-muted mb-2">Sylhet Polytechnic Institute, Sylhet, Bangladesh</p>
-                <p class="mb-0 fw-semibold text-primary"><time datetime="2019-07">July 2019</time> – <time datetime="2023-07">July 2023</time></p>
+
+          <div class="card edu-card">
+            <div class="edu-card-header">Degrees Obtained (Starting from Recent Degrees):</div>
+            <div class="edu-card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover edu-table align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-center">#</th>
+                      <th scope="col">Degree</th>
+                      <th scope="col">Institute</th>
+                      <th scope="col">Year</th>
+                      <th scope="col">Discipline &amp; Field</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td class="text-center">B.Sc. in Eng.</td>
+                      <td>Dhaka University of Engineering &amp; Technology (DUET), Gazipur</td>
+                      <td><time datetime="2024-12">2024</time> – Present</td>
+                      <td>Civil Engineering</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">2</td>
+                      <td class="text-center">Diploma in Eng.</td>
+                      <td>Sylhet Polytechnic Institute, Sylhet</td>
+                      <td><time datetime="2023-07">2023</time></td>
+                      <td>Civil Engineering</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
