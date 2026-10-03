@@ -12,6 +12,9 @@
     <meta name="author" content="Md Sakibul Hasan" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://sakibzyx.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://sakibzyx.github.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://sakibzyx.github.io/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="profile" />
@@ -21,6 +24,7 @@
     <meta property="og:title" content="Md Sakibul Hasan | Civil Engineering Student at DUET" />
     <meta property="og:description" content="Portfolio of Md Sakibul Hasan, Civil Engineering undergraduate at DUET with skills in structural engineering, AutoCAD, ETABS and Python." />
     <meta property="og:image" content="https://sakibzyx.github.io/assets/img/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Md Sakibul Hasan - Civil Engineering Student at DUET" />
@@ -40,6 +44,9 @@
     <link rel="icon" type="image/webp" href="/assets/img/md-sakibul-hasan.webp" />
     <link rel="apple-touch-icon" href="/assets/img/md-sakibul-hasan.webp" />
 
+    <!-- Preload hero image (LCP) -->
+    <link rel="preload" as="image" href="assets/img/md-sakibul-hasan.webp" fetchpriority="high" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,37 +62,51 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Md Sakibul Hasan",
-      "alternateName": "sakibzyx",
+      "@type": "ProfilePage",
       "url": "https://sakibzyx.github.io/",
-      "image": "https://sakibzyx.github.io/assets/img/md-sakibul-hasan.webp",
-      "description": "Civil Engineering student at DUET focused on structural analysis, earthquake engineering and sustainable infrastructure.",
-      "jobTitle": "Civil Engineering Student",
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "Dhaka University of Engineering & Technology (DUET)"
-      },
-      "alumniOf": [
-        {
+      "name": "Md Sakibul Hasan | Civil Engineering Student at DUET",
+      "dateModified": "2026-10-03T00:00:00+06:00",
+      "inLanguage": "en",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://sakibzyx.github.io/#person",
+        "name": "Md Sakibul Hasan",
+        "alternateName": "sakibzyx",
+        "url": "https://sakibzyx.github.io/",
+        "image": "https://sakibzyx.github.io/assets/img/md-sakibul-hasan.webp",
+        "description": "Civil Engineering student at DUET focused on structural analysis, earthquake engineering and sustainable infrastructure.",
+        "jobTitle": "Civil Engineering Student",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dhaka",
+          "addressCountry": "BD"
+        },
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Dhaka University of Engineering & Technology (DUET)"
+        },
+        "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "Sylhet Polytechnic Institute"
-        }
-      ],
-      "knowsAbout": [
-        "Civil Engineering",
-        "Structural Engineering",
-        "Seismic Design",
-        "AutoCAD",
-        "ETABS",
-        "Python"
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/sakibzyx",
-        "https://github.com/sakibzyx",
-        "https://www.facebook.com/sakibzyx1/"
-      ],
-      "email": "2301094@student.duet.ac.bd"
+        },
+        "knowsAbout": [
+          "Civil Engineering",
+          "Structural Engineering",
+          "Structural Analysis",
+          "Earthquake Engineering",
+          "Seismic Design",
+          "Sustainable Infrastructure",
+          "AutoCAD",
+          "ETABS",
+          "Python"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/sakibzyx",
+          "https://github.com/sakibzyx",
+          "https://www.facebook.com/sakibzyx1/"
+        ],
+        "email": "2301094@student.duet.ac.bd"
+      }
     }
     </script>
     <style>
@@ -356,6 +377,8 @@
   </head>
 
   <body>
+    <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main Navigation">
       <div class="container">
@@ -385,7 +408,7 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main>
+    <main id="main">
       <!-- Hero Section -->
       <header class="hero-section">
         <div class="hero-slider" aria-hidden="true">
@@ -465,14 +488,14 @@
               <div class="card p-4 h-100">
                 <h3 class="h4">BSc in Civil Engineering</h3>
                 <p class="text-muted mb-2">Dhaka University of Engineering &amp; Technology (DUET), Gazipur, Bangladesh</p>
-                <p class="mb-0 fw-semibold text-primary">December 2024 – Present</p>
+                <p class="mb-0 fw-semibold text-primary"><time datetime="2024-12">December 2024</time> – Present</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="card p-4 h-100">
                 <h3 class="h4">Diploma in Civil Engineering</h3>
                 <p class="text-muted mb-2">Sylhet Polytechnic Institute, Sylhet, Bangladesh</p>
-                <p class="mb-0 fw-semibold text-primary">July 2019 – July 2023</p>
+                <p class="mb-0 fw-semibold text-primary"><time datetime="2019-07">July 2019</time> – <time datetime="2023-07">July 2023</time></p>
               </div>
             </div>
           </div>
@@ -522,7 +545,7 @@
           <div class="card p-4">
             <h3 class="h4 mb-1">Engineering Intern</h3>
             <p class="text-muted mb-2">National Engineering Development Limited, Gazipur, Dhaka, Bangladesh</p>
-            <p class="mb-0 text-primary fw-semibold">Aug 2023 – Oct 2023</p>
+            <p class="mb-0 text-primary fw-semibold"><time datetime="2023-08">Aug 2023</time> – <time datetime="2023-10">Oct 2023</time></p>
           </div>
         </div>
       </section>
