@@ -3,33 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2c3e50" />
 
     <!-- Primary SEO Meta Tags -->
-    <title>Md Sakibul Hasan | Civil Engineering Student at DUET &amp; Portfolio</title>
-    <meta name="title" content="Md Sakibul Hasan | Civil Engineering Student at DUET &amp; Portfolio" />
-    <meta name="description" content="Official portfolio of Md Sakibul Hasan, undergraduate Civil Engineering student at DUET specializing in structural analysis, earthquake engineering, and sustainable infrastructure." />
+    <title>Md Sakibul Hasan | Civil Engineering Student at DUET</title>
+    <meta name="description" content="Portfolio of Md Sakibul Hasan, Civil Engineering student at DUET focused on structural analysis, earthquake engineering and sustainable infrastructure." />
     <meta name="keywords" content="Md Sakibul Hasan, Sakibul Hasan, sakibzyx, Civil Engineering DUET, Structural Engineering Bangladesh, DUET Gazipur, Civil Engineer Portfolio" />
     <meta name="author" content="Md Sakibul Hasan" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://sakibzyx.github.io/" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Md Sakibul Hasan" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://sakibzyx.github.io/" />
     <meta property="og:title" content="Md Sakibul Hasan | Civil Engineering Student at DUET" />
-    <meta property="og:description" content="Portfolio of Md Sakibul Hasan — Civil Engineering undergraduate at DUET with expertise in structural engineering, AutoCAD, ETABS, and Python." />
-    <meta property="og:image" content="https://sakibzyx.github.io/assets/img/md-sakibul-hasan.webp" />
+    <meta property="og:description" content="Portfolio of Md Sakibul Hasan, Civil Engineering undergraduate at DUET with skills in structural engineering, AutoCAD, ETABS and Python." />
+    <meta property="og:image" content="https://sakibzyx.github.io/assets/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Md Sakibul Hasan - Civil Engineering Student at DUET" />
+    <meta property="profile:first_name" content="Md Sakibul" />
+    <meta property="profile:last_name" content="Hasan" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://sakibzyx.github.io/" />
     <meta name="twitter:title" content="Md Sakibul Hasan | Civil Engineering Student at DUET" />
-    <meta name="twitter:description" content="Portfolio of Md Sakibul Hasan — Civil Engineering undergraduate at DUET focusing on structural analysis and resilient design." />
-    <meta name="twitter:image" content="https://sakibzyx.github.io/assets/img/md-sakibul-hasan.webp" />
+    <meta name="twitter:description" content="Portfolio of Md Sakibul Hasan, Civil Engineering undergraduate at DUET focusing on structural analysis and resilient design." />
+    <meta name="twitter:image" content="https://sakibzyx.github.io/assets/img/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Md Sakibul Hasan - Civil Engineering Student at DUET" />
 
     <!-- Favicons -->
-    <link rel="icon" type="image/webp" href="assets/img/md-sakibul-hasan.webp" />
-    <link rel="apple-touch-icon" href="assets/img/md-sakibul-hasan.webp" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/webp" href="/assets/img/md-sakibul-hasan.webp" />
+    <link rel="apple-touch-icon" href="/assets/img/md-sakibul-hasan.webp" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +47,9 @@
 
     <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Icons CSS loads without blocking first paint -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" /></noscript>
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -49,6 +60,7 @@
       "alternateName": "sakibzyx",
       "url": "https://sakibzyx.github.io/",
       "image": "https://sakibzyx.github.io/assets/img/md-sakibul-hasan.webp",
+      "description": "Civil Engineering student at DUET focused on structural analysis, earthquake engineering and sustainable infrastructure.",
       "jobTitle": "Civil Engineering Student",
       "affiliation": {
         "@type": "CollegeOrUniversity",
@@ -384,11 +396,9 @@
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-content">
-          <img src="assets/img/md-sakibul-hasan.webp" alt="Portrait of Md Sakibul Hasan" class="profile-img" width="190" height="190" loading="eager" />
-          <h1 class="mb-2">
-            <span class="d-none d-sm-inline">Md Sakibul Hasan</span>
-            <span class="d-inline d-sm-none">sakibzyx</span>
-          </h1>
+          <img src="assets/img/md-sakibul-hasan.webp" alt="Portrait of Md Sakibul Hasan" class="profile-img" width="190" height="190" loading="eager" fetchpriority="high" />
+          <h1 class="mb-1">Md Sakibul Hasan</h1>
+          <p class="mb-2 text-white-50">@sakibzyx</p>
           <p class="lead mb-1">Pursuing BSc in Civil Engineering</p>
           <p class="mb-0 text-white-50">
             Dhaka University of Engineering &amp; Technology (DUET), Gazipur, Dhaka, Bangladesh
@@ -408,18 +418,24 @@
           <div class="row g-4">
             <div class="col-lg-8">
               <p class="text-justify">
-                Hi, I'm MD Sakibul Hasan, a passionate undergraduate student of Civil Engineering at 
-                the Dhaka University of Engineering & Technology (DUET) and a Diploma graduate in 
-                Civil Technology from Sylhet Polytechnic Institute in 2023. My interests in structural 
-                engineering, structural analysis, earthquake engineering, seismic-resistant design, and 
-                sustainable infrastructure. I am passionate about developing innovative, resilient, and 
-                sustainable engineering solutions while continuously strengthening my technical and analytical 
-                skills.<br /> Beyond academics, I serve as the Finance Secretary of the DUET Journalist Association and a 
-                Volunteer Committee Member of Bijoy 24 Hall, DUET, where I contribute to financial planning and 
-                organizational activities. I have also mentored 700+ students in Physics, Mathematics, and Engineering, 
-                reflecting my commitment to leadership, education, and community development. <br /> I am always open to connecting with 
-                engineers, researchers, students, and industry professionals to collaborate, share knowledge, and explore 
-                opportunities in civil engineering and sustainable infrastructure.
+                Hi, I'm <strong>Md Sakibul Hasan</strong>, a passionate undergraduate student of Civil Engineering at
+                the <strong>Dhaka University of Engineering &amp; Technology (DUET)</strong> and a Diploma graduate in
+                Civil Engineering from Sylhet Polytechnic Institute (2023). My interests include structural
+                engineering, structural analysis, earthquake engineering, seismic-resistant design, and
+                sustainable infrastructure. I am passionate about developing innovative, resilient, and
+                sustainable engineering solutions while continuously strengthening my technical and analytical
+                skills.
+              </p>
+              <p class="text-justify">
+                Beyond academics, I serve as the Finance Secretary of the DUET Journalist Association and a
+                Volunteer Committee Member of Bijoy 24 Hall, DUET, where I contribute to financial planning and
+                organizational activities. I have also mentored 700+ students in Physics, Mathematics, and
+                Engineering, reflecting my commitment to leadership, education, and community development.
+              </p>
+              <p class="text-justify mb-0">
+                I am always open to connecting with engineers, researchers, students, and industry professionals
+                to collaborate, share knowledge, and explore opportunities in civil engineering and sustainable
+                infrastructure.
               </p>
             </div>
             <div class="col-lg-4">
@@ -427,10 +443,9 @@
                 <h3 class="h5 mb-3">Personal Info</h3>
                 <p class="mb-2">
                   <strong>Email:</strong><br />
-                  2301094@student.duet.ac.bd<br />
-                  sakib.zyx@gmail.com
+                  <a href="mailto:2301094@student.duet.ac.bd" class="text-decoration-none">2301094@student.duet.ac.bd</a><br />
+                  <a href="mailto:sakib.zyx@gmail.com" class="text-decoration-none">sakib.zyx@gmail.com</a>
                 </p>
-                <p class="mb-2"><strong>Phone:</strong>+88015XXXXXXXX</p>
                 <p class="mb-3"><strong>Location:</strong> Dhaka, Bangladesh</p>
                 <hr class="my-2" />
                 <p class="small text-muted mb-0">
@@ -472,7 +487,7 @@
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
               <div class="card p-4 h-100">
-                <h3 class="h5 mb-3"><i class="bi bi-rulers text-primary me-2"></i>Drafting &amp; Analysis</h3>
+                <h3 class="h5 mb-3"><i class="bi bi-rulers text-primary me-2" aria-hidden="true"></i>Drafting &amp; Analysis</h3>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge border border-primary text-primary fw-semibold px-3 py-2">AutoCAD</span>
                   <span class="badge border border-primary text-primary fw-semibold px-3 py-2">ETABS</span>
@@ -481,7 +496,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="card p-4 h-100">
-                <h3 class="h5 mb-3"><i class="bi bi-code-slash text-primary me-2"></i>Programming Languages</h3>
+                <h3 class="h5 mb-3"><i class="bi bi-code-slash text-primary me-2" aria-hidden="true"></i>Programming Languages</h3>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge border border-primary text-primary fw-semibold px-3 py-2">Python</span>
                 </div>
@@ -489,7 +504,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="card p-4 h-100">
-                <h3 class="h5 mb-3"><i class="bi bi-file-earmark-text text-primary me-2"></i>Productivity Tools</h3>
+                <h3 class="h5 mb-3"><i class="bi bi-file-earmark-text text-primary me-2" aria-hidden="true"></i>Productivity Tools</h3>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge border border-primary text-primary fw-semibold px-3 py-2">MS Word</span>
                   <span class="badge border border-primary text-primary fw-semibold px-3 py-2">MS Excel</span>
@@ -552,35 +567,15 @@
         </div>
       </section>
 
-      <!-- Memberships Section -->
-      <section id="memberships" class="py-5 bg-light">
-        <div class="container">
-          <h2 class="section-title">Membership of Professional Societies</h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-hover align-middle">
-              <thead class="table-light">
-                <tr>
-                  <th scope="col" class="text-center">Sl.</th>
-                  <th scope="col">Type</th>
-                  <th scope="col">Organization</th>
-                  <th scope="col">Membership Code</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-center">1</td>
-                  <td>####</td>
-                  <td>The Institution of Engineers, Bangladesh (IEB)</td>
-                  <td>#####</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+      <!--
+        Memberships section removed because it only had placeholder data (####).
+        Add it back once you have the real membership info:
+
+        <section id="memberships" class="py-5 bg-light"> ... </section>
+      -->
 
       <!-- Co-Curricular Section -->
-      <section id="activities" class="py-5">
+      <section id="activities" class="py-5 bg-light">
         <div class="container">
           <h2 class="section-title">Co-Curricular &amp; Voluntary Activities</h2>
           <div class="row g-4">
@@ -598,7 +593,8 @@
                     <h4 class="h6 fw-bold mb-0">
                       Finance Secretary
                       <span class="badge bg-success-subtle text-success-emphasis ms-1">
-                        <i class="bi bi-arrow-up-circle-fill me-1"></i>
+                        <i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">Promoted</span>
                       </span>
                     </h4>
                     <p class="small text-muted mb-0">
@@ -642,7 +638,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-5 bg-light">
+      <section id="contact" class="py-5">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -650,10 +646,9 @@
                 <h2 class="h4 mb-3">Get in Touch</h2>
                 <p class="mb-2">
                   <strong>Email:</strong>
-                  2301094@student.duet.ac.bd, <br />
-                  sakib.zyx@gmail.com
+                  <a href="mailto:2301094@student.duet.ac.bd" class="text-decoration-none">2301094@student.duet.ac.bd</a>,<br />
+                  <a href="mailto:sakib.zyx@gmail.com" class="text-decoration-none">sakib.zyx@gmail.com</a>
                 </p>
-                <p class="mb-2"><strong>Phone:</strong>+88015XXXXXXXX</p>
                 <p class="mb-4"><strong>Location:</strong> Dhaka, Bangladesh</p>
 
                 <h3 class="h5">Connect With Me</h3>
@@ -678,7 +673,7 @@
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" aria-label="Scroll back to top">
-      <i class="bi bi-arrow-up"></i>
+      <i class="bi bi-arrow-up" aria-hidden="true"></i>
     </a>
 
     <!-- Scripts -->
