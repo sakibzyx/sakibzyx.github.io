@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#2c3e50" />
-<meta name="google-site-verification" content="FJRtYOnZqB3p0eLxHxN9ENmTXPmHoXyRHZNF1vea8_Q" />
+    <meta name="google-site-verification" content="FJRtYOnZqB3p0eLxHxN9ENmTXPmHoXyRHZNF1vea8_Q" />
+
     <!-- Primary SEO Meta Tags -->
     <title>Md Sakibul Hasan | Civil Engineering Student at DUET</title>
     <meta name="description" content="Portfolio of Md Sakibul Hasan, Civil Engineering student at DUET focused on structural analysis, earthquake engineering and sustainable infrastructure." />
@@ -47,14 +48,11 @@
     <!-- Preload hero image (LCP) -->
     <link rel="preload" as="image" href="assets/img/md-sakibul-hasan.webp" fetchpriority="high" />
 
-    <!-- Google Fonts -->
+    <!-- Fonts & Stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Icons CSS loads without blocking first paint -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" /></noscript>
 
@@ -76,30 +74,10 @@
         "image": "https://sakibzyx.github.io/assets/img/md-sakibul-hasan.webp",
         "description": "Civil Engineering student at DUET focused on structural analysis, earthquake engineering and sustainable infrastructure.",
         "jobTitle": "Civil Engineering Student",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Dhaka",
-          "addressCountry": "BD"
-        },
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Dhaka University of Engineering & Technology (DUET)"
-        },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Sylhet Polytechnic Institute"
-        },
-        "knowsAbout": [
-          "Civil Engineering",
-          "Structural Engineering",
-          "Structural Analysis",
-          "Earthquake Engineering",
-          "Seismic Design",
-          "Sustainable Infrastructure",
-          "AutoCAD",
-          "ETABS",
-          "Python"
-        ],
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Dhaka University of Engineering & Technology (DUET)" },
+        "alumniOf": { "@type": "EducationalOrganization", "name": "Sylhet Polytechnic Institute" },
+        "knowsAbout": ["Civil Engineering", "Structural Engineering", "Structural Analysis", "Earthquake Engineering", "Seismic Design", "Sustainable Infrastructure", "AutoCAD", "ETABS", "Python"],
         "sameAs": [
           "https://www.linkedin.com/in/sakibzyx",
           "https://github.com/sakibzyx",
@@ -109,44 +87,22 @@
       }
     }
     </script>
+
     <style>
       :root {
         --primary-color: #2c3e50;
         --secondary-color: #3498db;
         --accent-color: #e74c3c;
-        --light-color: #ecf0f1;
         --dark-color: #2c3e50;
       }
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 70px;
-      }
+      html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+      body { font-family: "Poppins", sans-serif; color: #333; line-height: 1.6; }
+      .text-justify { text-align: justify; }
 
-      body {
-        font-family: "Poppins", sans-serif;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      .text-justify {
-        text-align: justify;
-      }
-
-      .navbar {
-        background-color: var(--primary-color);
-        padding: 12px 0;
-      }
-
-      .navbar-brand,
-      .nav-link {
-        font-weight: 500;
-      }
-
-      .navbar-nav {
-        gap: 6px;
-        align-items: center;
-      }
+      /* Navbar */
+      .navbar { background-color: var(--primary-color); padding: 12px 0; }
+      .navbar-nav { gap: 6px; align-items: center; }
 
       .navbar-dark .navbar-nav .nav-link.nav-box,
       .nav-cv-box {
@@ -178,253 +134,55 @@
       }
 
       @media (max-width: 991.98px) {
-        .navbar-nav {
-          padding-top: 12px;
-          align-items: stretch;
-        }
-
-        .navbar-dark .navbar-nav .nav-link.nav-box {
-          display: block;
-          text-align: center;
-          margin-bottom: 4px;
-        }
+        .navbar-nav { padding-top: 12px; align-items: stretch; }
+        .navbar-dark .navbar-nav .nav-link.nav-box { display: block; text-align: center; margin-bottom: 4px; }
       }
 
-      .hero-section {
-        position: relative;
-        overflow: hidden;
-        color: white;
-        padding: 60px 0;
-        text-align: center;
-      }
+      /* Hero */
+      .hero-section { position: relative; overflow: hidden; color: #fff; padding: 60px 0; text-align: center; }
+      .hero-slider { position: absolute; inset: 0; z-index: 0; }
+      .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease-in-out; }
+      .hero-slide.active { opacity: 1; }
+      .hero-overlay { position: absolute; inset: 0; z-index: 1; opacity: 0.82; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); }
+      .hero-content { position: relative; z-index: 2; }
+      .profile-img { width: 190px; height: 190px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255, 255, 255, 0.4); margin-bottom: 12px; }
 
-      .hero-slider {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-      }
+      /* Titles & cards */
+      .section-title { position: relative; margin-bottom: 35px; padding-bottom: 16px; font-weight: 700; font-size: 1.85rem; letter-spacing: 0.3px; color: var(--primary-color); }
+      .section-title::after { content: ""; position: absolute; bottom: 0; left: 0; width: 60px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--secondary-color), var(--accent-color)); }
+      .card { border: none; border-radius: 10px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+      .card:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12); }
 
-      .hero-slide {
-        position: absolute;
-        inset: 0;
-        background-size: cover;
-        background-position: center;
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-      }
+      /* Skills and education cards: no movement on hover */
+      #skills .card:hover, .edu-card:hover { transform: none; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); }
 
-      .hero-slide.active {
-        opacity: 1;
-      }
+      /* Education table */
+      .edu-card { border-radius: 4px; background: #fff; }
+      .edu-card-header { padding: 18px 22px; font-weight: 600; font-size: 0.95rem; color: #555; border-bottom: 1px solid #eee; }
+      .edu-card-body { padding: 18px 20px 22px; }
+      .edu-table { font-size: 0.88rem; color: #555; border-color: #e3e3e3; }
+      .edu-table thead th { background-color: #f5f5f5; color: #555; font-weight: 600; padding: 10px; border-color: #e3e3e3; }
+      .edu-table td { padding: 10px; border-color: #e3e3e3; }
+      .edu-table tbody tr:hover { background-color: #fafafa; }
 
-      .hero-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        opacity: 0.82;
-        z-index: 1;
-      }
+      /* Role timeline */
+      .role-timeline { position: relative; padding-left: 22px; border-left: 2px solid #d5dbe1; }
+      .role-item { position: relative; padding-bottom: 14px; }
+      .role-item:last-child { padding-bottom: 0; }
+      .role-item::before { content: ""; position: absolute; left: -29px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #adb5bd; border: 2px solid #fff; }
+      .role-item.current::before { background: var(--secondary-color); }
 
-      .hero-content {
-        position: relative;
-        z-index: 2;
-      }
+      /* Social icons */
+      .social-icon, .hero-social-icon { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.25s ease; }
+      .social-icon { width: 40px; height: 40px; background-color: var(--primary-color); margin-right: 10px; }
+      .social-icon:hover { background-color: var(--secondary-color); color: #fff; transform: translateY(-3px); }
+      .hero-social-icon { width: 42px; height: 42px; margin: 0 6px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.35); }
+      .hero-social-icon:hover { background-color: rgba(255, 255, 255, 0.35); color: #fff; transform: translateY(-3px); }
 
-      .profile-img {
-        width: 190px;
-        height: 190px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid rgba(255, 255, 255, 0.4);
-        margin-bottom: 12px;
-      }
+      footer { background-color: var(--dark-color); color: #fff; padding: 30px 0; }
 
-      .section-title {
-        position: relative;
-        margin-bottom: 35px;
-        padding-bottom: 16px;
-        font-weight: 700;
-        font-size: 1.85rem;
-        letter-spacing: 0.3px;
-        color: var(--primary-color);
-      }
-
-      .section-title::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 4px;
-        border-radius: 2px;
-        background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-      }
-
-      .card {
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-      }
-
-      /* Technical Skills cards: fixed, no movement on hover */
-      #skills .card:hover {
-        transform: none;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-      }
-
-      /* Education table (degrees style) */
-      .edu-card:hover {
-        transform: none;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-      }
-
-      .edu-card {
-        border-radius: 4px;
-        background: #fff;
-      }
-
-      .edu-card-header {
-        padding: 18px 22px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        color: #555;
-        border-bottom: 1px solid #eee;
-      }
-
-      .edu-card-body {
-        padding: 18px 20px 22px;
-      }
-
-      .edu-table {
-        font-size: 0.88rem;
-        color: #555;
-        border-color: #e3e3e3;
-      }
-
-      .edu-table thead th {
-        background-color: #f5f5f5;
-        color: #555;
-        font-weight: 600;
-        padding: 10px 10px;
-        border-color: #e3e3e3;
-      }
-
-      .edu-table td {
-        padding: 10px;
-        border-color: #e3e3e3;
-      }
-
-      .edu-table tbody tr:hover {
-        background-color: #fafafa;
-      }
-
-      /* Role timeline (Co-curricular) */
-      .role-timeline {
-        position: relative;
-        padding-left: 22px;
-        border-left: 2px solid #d5dbe1;
-      }
-
-      .role-item {
-        position: relative;
-        padding-bottom: 14px;
-      }
-
-      .role-item:last-child {
-        padding-bottom: 0;
-      }
-
-      .role-item::before {
-        content: "";
-        position: absolute;
-        left: -29px;
-        top: 6px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #adb5bd;
-        border: 2px solid #fff;
-      }
-
-      .role-item.current::before {
-        background: var(--secondary-color);
-      }
-
-      .social-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background-color: var(--primary-color);
-        color: white;
-        border-radius: 50%;
-        margin-right: 10px;
-        transition: all 0.25s ease;
-        text-decoration: none;
-      }
-
-      .social-icon:hover {
-        background-color: var(--secondary-color);
-        color: white;
-        transform: translateY(-3px);
-      }
-
-      .hero-social-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 42px;
-        height: 42px;
-        background-color: rgba(255, 255, 255, 0.15);
-        color: white;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.35);
-        margin: 0 6px;
-        transition: all 0.25s ease;
-        text-decoration: none;
-      }
-
-      .hero-social-icon:hover {
-        background-color: rgba(255, 255, 255, 0.35);
-        color: white;
-        transform: translateY(-3px);
-      }
-
-      footer {
-        background-color: var(--dark-color);
-        color: white;
-        padding: 30px 0;
-      }
-
-      .back-to-top {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        width: 46px;
-        height: 46px;
-        background-color: var(--secondary-color);
-        color: white;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 46px;
-        font-size: 20px;
-        text-decoration: none;
-        display: none;
-        z-index: 1000;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .back-to-top:hover {
-        color: white;
-        background-color: var(--primary-color);
-      }
+      .back-to-top { position: fixed; bottom: 24px; right: 24px; width: 46px; height: 46px; background-color: var(--secondary-color); color: #fff; border-radius: 50%; text-align: center; line-height: 46px; font-size: 20px; text-decoration: none; display: none; z-index: 1000; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+      .back-to-top:hover { color: #fff; background-color: var(--primary-color); }
     </style>
   </head>
 
@@ -434,10 +192,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main Navigation">
       <div class="container">
-        <!-- Logo & CV Link -->
         <div class="d-flex align-items-center gap-3">
           <a class="navbar-brand d-flex align-items-center mb-0 me-0" href="https://sakibzyx.github.io/" aria-label="Home">
-            <img src="assets/img/md-sakibul-hasan.webp" height="36" width="36" alt="Md Sakibul Hasan Portfolio Logo" />
+            <img src="assets/img/md-sakibul-hasan.webp" height="36" width="36" style="object-fit: cover" alt="Md Sakibul Hasan Portfolio Logo" />
           </a>
           <a class="nav-cv-box" href="https://sakibzyx.github.io/cv/index" target="_blank" rel="noopener">CV</a>
         </div>
@@ -446,7 +203,6 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation Links (order must match section order on the page) -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link nav-box" href="#about">About</a></li>
@@ -459,9 +215,8 @@
       </div>
     </nav>
 
-    <!-- Main Content Area -->
     <main id="main">
-      <!-- Hero Section -->
+      <!-- Hero -->
       <header class="hero-section">
         <div class="hero-slider" aria-hidden="true">
           <div class="hero-slide active" style="background-image: linear-gradient(135deg, #16222a, #3a6073)"></div>
@@ -474,9 +229,7 @@
           <h1 class="mb-1">Md Sakibul Hasan</h1>
           <p class="mb-2 text-white-50">@sakibzyx</p>
           <p class="lead mb-1">Pursuing BSc in Civil Engineering</p>
-          <p class="mb-0 text-white-50">
-            Dhaka University of Engineering &amp; Technology (DUET), Gazipur, Dhaka, Bangladesh
-          </p>
+          <p class="mb-0 text-white-50">Dhaka University of Engineering &amp; Technology (DUET), Gazipur, Dhaka, Bangladesh</p>
           <div class="d-flex justify-content-center mt-3">
             <a href="https://www.linkedin.com/in/sakibzyx" class="hero-social-icon" target="_blank" rel="noopener me" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="https://github.com/sakibzyx" class="hero-social-icon" target="_blank" rel="noopener me" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -485,7 +238,7 @@
         </div>
       </header>
 
-      <!-- About Section -->
+      <!-- About -->
       <section id="about" class="py-5">
         <div class="container">
           <h2 class="section-title">About Me</h2>
@@ -497,8 +250,7 @@
                 Civil Engineering from Sylhet Polytechnic Institute (2023). My interests include structural
                 engineering, structural analysis, earthquake engineering, seismic-resistant design, and
                 sustainable infrastructure. I am passionate about developing innovative, resilient, and
-                sustainable engineering solutions while continuously strengthening my technical and analytical
-                skills.
+                sustainable engineering solutions while continuously strengthening my technical and analytical skills.
               </p>
               <p class="text-justify">
                 Beyond academics, I serve as the Finance Secretary of the DUET Journalist Association and a
@@ -508,8 +260,7 @@
               </p>
               <p class="text-justify mb-0">
                 I am always open to connecting with engineers, researchers, students, and industry professionals
-                to collaborate, share knowledge, and explore opportunities in civil engineering and sustainable
-                infrastructure.
+                to collaborate, share knowledge, and explore opportunities in civil engineering and sustainable infrastructure.
               </p>
             </div>
             <div class="col-lg-4">
@@ -531,11 +282,10 @@
         </div>
       </section>
 
-      <!-- Education Section -->
+      <!-- Education -->
       <section id="education" class="py-5 bg-light">
         <div class="container">
           <h2 class="section-title">Education</h2>
-
           <div class="card edu-card">
             <div class="edu-card-header">Degrees Obtained (Starting from Recent Degrees):</div>
             <div class="edu-card-body">
@@ -573,7 +323,7 @@
         </div>
       </section>
 
-      <!-- Technical Skills Section -->
+      <!-- Technical Skills -->
       <section id="skills" class="py-5">
         <div class="container">
           <h2 class="section-title">Technical Skills</h2>
@@ -609,7 +359,7 @@
         </div>
       </section>
 
-      <!-- Experience Section -->
+      <!-- Professional Experience + Project Activities -->
       <section id="experience" class="py-5 bg-light">
         <div class="container">
           <h2 class="section-title">Professional Experience</h2>
@@ -618,10 +368,7 @@
             <p class="text-muted mb-2">National Engineering Development Limited, Gazipur, Dhaka, Bangladesh</p>
             <p class="mb-0 text-primary fw-semibold"><time datetime="2023-08">Aug 2023</time> – <time datetime="2023-10">Oct 2023</time></p>
           </div>
-        </div>
-      </section>
 
-      <!-- Project Activities -->
           <h3 class="h5 fw-bold mt-5 mb-3">Project Activities</h3>
           <div class="table-responsive">
             <table class="table table-striped table-hover align-middle">
@@ -636,22 +383,21 @@
                 </tr>
               </thead>
               <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td>Failure Behaviour of Beam</td>
-                    <td>CED, DUET</td>
-                    <td>Materials Testing &amp; Beam Casting Team Member</td>
-                    <td class="text-nowrap">-</td>
-                    <td class="text-nowrap">Jun 2026 -Aug 2026</td>
-                  </tr>
-
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Failure Behaviour of Beam</td>
+                  <td>CED, DUET</td>
+                  <td>Materials Testing &amp; Beam Casting Team Member</td>
+                  <td class="text-nowrap">–</td>
+                  <td class="text-nowrap">Jun 2026 – Aug 2026</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
 
-      <!-- Certifications Section -->
+      <!-- Certifications -->
       <section id="certifications" class="py-5">
         <div class="container">
           <h2 class="section-title">Certifications</h2>
@@ -666,24 +412,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="text-center">1</td>
-                  <td>Basic Programming with Python</td>
-                  <td>Bangladesh Computer Council</td>
-                  <td>Jun 2026</td>
-                </tr>
-                <tr>
-                  <td class="text-center">2</td>
-                  <td>Digital Security Essentials</td>
-                  <td>National Cyber Security Agency</td>
-                  <td>Jun 2020</td>
-                </tr>
-                <tr>
-                  <td class="text-center">3</td>
-                  <td>e-Commerce Training</td>
-                  <td>Bangladesh Computer Council</td>
-                  <td>Nov 2020</td>
-                </tr>
+                <tr><td class="text-center">1</td><td>Basic Programming with Python</td><td>Bangladesh Computer Council</td><td>Jun 2026</td></tr>
+                <tr><td class="text-center">2</td><td>Digital Security Essentials</td><td>National Cyber Security Agency</td><td>Jun 2020</td></tr>
+                <tr><td class="text-center">3</td><td>e-Commerce Training</td><td>Bangladesh Computer Council</td><td>Nov 2020</td></tr>
               </tbody>
             </table>
           </div>
@@ -691,7 +422,9 @@
       </section>
 
       <!-- Membership -->
-          <h3 class="h5 fw-bold mt-5 mb-3">Membership</h3>
+      <section id="memberships" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title">Membership</h2>
           <div class="table-responsive">
             <table class="table table-striped table-hover align-middle">
               <thead class="table-light">
@@ -703,38 +436,24 @@
                 </tr>
               </thead>
               <tbody>
-                  <tr>
-                    <td class="text-center">1</td>
-                    <td>Member</td>
-                    <td>American Society of Civil Engineers (ASCE)</td>
-                    <td>12535856</td>
-                  </tr>
-                  <tr>
-                    <td class="text-center">2</td>
-                    <td>Member</td>
-                    <td>American Concrete Institute (ACI)</td>
-                    <td>2333264</td>
-                  </tr>
-
+                <tr><td class="text-center">1</td><td>Member</td><td>American Society of Civil Engineers (ASCE)</td><td>12535856</td></tr>
+                <tr><td class="text-center">2</td><td>Member</td><td>American Concrete Institute (ACI)</td><td>2333264</td></tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
 
-      <!-- Co-Curricular Section -->
-      <section id="activities" class="py-5 bg-light">
+      <!-- Co-Curricular & Voluntary Activities -->
+      <section id="activities" class="py-5">
         <div class="container">
           <h2 class="section-title">Co-Curricular &amp; Voluntary Activities</h2>
           <div class="row g-4">
-            <!-- DUET Journalist Association -->
             <div class="col-lg-6">
               <div class="card p-4 h-100">
                 <div class="mb-3">
                   <h3 class="h5 mb-0">DUET Journalist Association</h3>
-                  <p class="text-muted small mb-0">
-                    <span class="js-duration" data-start="2025-05"></span>
-                  </p>
+                  <p class="text-muted small mb-0"><span class="js-duration" data-start="2025-05"></span></p>
                 </div>
                 <div class="role-timeline">
                   <div class="role-item current">
@@ -745,38 +464,25 @@
                         <span class="visually-hidden">Promoted</span>
                       </span>
                     </h4>
-                    <p class="small text-muted mb-0">
-                      Nov 2025 – Present ·
-                      <span class="js-duration" data-start="2025-11"></span>
-                    </p>
+                    <p class="small text-muted mb-0">Nov 2025 – Present · <span class="js-duration" data-start="2025-11"></span></p>
                   </div>
                   <div class="role-item">
                     <h4 class="h6 fw-bold mb-0">Executive Member</h4>
-                    <p class="small text-muted mb-0">
-                      May 2025 – Nov 2025 ·
-                      <span class="js-duration" data-start="2025-05" data-end="2025-11"></span>
-                    </p>
+                    <p class="small text-muted mb-0">May 2025 – Nov 2025 · <span class="js-duration" data-start="2025-05" data-end="2025-11"></span></p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Hall volunteer -->
             <div class="col-lg-6">
               <div class="card p-4 h-100">
                 <div class="mb-3">
                   <h3 class="h5 mb-0">Bijoy 24 Hall, DUET</h3>
-                  <p class="text-muted small mb-0">
-                    <span class="js-duration" data-start="2026-04"></span>
-                  </p>
+                  <p class="text-muted small mb-0"><span class="js-duration" data-start="2026-04"></span></p>
                 </div>
                 <div class="role-timeline">
                   <div class="role-item current">
                     <h4 class="h6 fw-bold mb-0">Hall Volunteer Committee Member</h4>
-                    <p class="small text-muted mb-0">
-                      Apr 2026 – Present ·
-                      <span class="js-duration" data-start="2026-04"></span>
-                    </p>
+                    <p class="small text-muted mb-0">Apr 2026 – Present · <span class="js-duration" data-start="2026-04"></span></p>
                   </div>
                 </div>
               </div>
@@ -785,8 +491,8 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-5">
+      <!-- Contact -->
+      <section id="contact" class="py-5 bg-light">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
@@ -798,7 +504,6 @@
                   <a href="mailto:sakib.zyx@gmail.com" class="text-decoration-none">sakib.zyx@gmail.com</a>
                 </p>
                 <p class="mb-4"><strong>Location:</strong> Dhaka, Bangladesh</p>
-
                 <h3 class="h5">Connect With Me</h3>
                 <div class="d-flex mt-2">
                   <a href="https://www.linkedin.com/in/sakibzyx" class="social-icon" target="_blank" rel="noopener me" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
@@ -812,19 +517,14 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="text-center">
       <div class="container">
         <p class="mb-0">&copy; <span id="copyright-year">2026</span> Md Sakibul Hasan. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" aria-label="Scroll back to top">
-      <i class="bi bi-arrow-up" aria-hidden="true"></i>
-    </a>
+    <a href="#" class="back-to-top" aria-label="Scroll back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.getElementById("copyright-year").textContent = new Date().getFullYear();
@@ -868,13 +568,9 @@
       function updateActiveLink() {
         const y = window.scrollY + 120;
         let current = "";
-        navSections.forEach((sec) => {
-          if (sec.offsetTop <= y) current = sec.id;
-        });
+        navSections.forEach((sec) => { if (sec.offsetTop <= y) current = sec.id; });
         const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-        if (atBottom && navSections.length) {
-          current = navSections[navSections.length - 1].id;
-        }
+        if (atBottom && navSections.length) current = navSections[navSections.length - 1].id;
         navLinks.forEach((a) => a.classList.toggle("active", a.hash === "#" + current));
       }
 
@@ -885,16 +581,14 @@
           e.preventDefault();
           target.scrollIntoView({ behavior: "smooth" });
           history.pushState(null, "", a.hash);
-          if (navCollapse.classList.contains("show")) {
-            bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
-          }
+          if (navCollapse.classList.contains("show")) bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
         });
       });
 
       window.addEventListener("scroll", updateActiveLink);
       updateActiveLink();
 
-      // Back to top toggle
+      // Back to top
       const backToTopButton = document.querySelector(".back-to-top");
       window.addEventListener("scroll", () => {
         backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
