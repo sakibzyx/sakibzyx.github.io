@@ -51,7 +51,7 @@ function render() {
     (!q || (p.title + " " + p.desc + " " + p.category).toLowerCase().includes(q)));
 
   grid.replaceChildren(...visible.map((p, i) => {
-    const col = el("div", "col-sm-6 col-lg-4");
+    const col = el("div", "col-6 col-md-4 col-lg-3");
     const card = el("button", "card gcard h-100");
     card.type = "button";
     card.setAttribute("aria-label", "Open " + p.title);
@@ -63,8 +63,14 @@ function render() {
     img.onerror = () => frame.classList.add("missing");
     frame.append(img);
     const meta = el("span", "meta");
-    meta.append(el("span", "tag", p.category), el("strong", "", p.title), el("span", "small text-muted", p.desc));
-    if (p.date) meta.append(el("small", "", p.date));
+    meta.append(el("span", "tag", p.category), el("strong", "cap-title", p.title), el("span", "cap-desc", p.desc));
+    if (p.date) {
+      const d = el("span", "cap-date");
+      const icon = el("i", "bi bi-calendar3 me-2");
+      icon.setAttribute("aria-hidden", "true");
+      d.append(icon, p.date);
+      meta.append(d);
+    }
     card.append(frame, meta);
     card.onclick = () => open(i);
     col.append(card);
