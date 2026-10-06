@@ -51,7 +51,8 @@ function render() {
     (!q || (p.title + " " + p.desc + " " + p.category).toLowerCase().includes(q)));
 
   grid.replaceChildren(...visible.map((p, i) => {
-    const card = el("button", "card");
+    const col = el("div", "col-sm-6 col-lg-4");
+    const card = el("button", "card gcard h-100");
     card.type = "button";
     card.setAttribute("aria-label", "Open " + p.title);
     const frame = el("span", "frame" + (p.fit === "contain" ? " doc" : ""));
@@ -62,11 +63,12 @@ function render() {
     img.onerror = () => frame.classList.add("missing");
     frame.append(img);
     const meta = el("span", "meta");
-    meta.append(el("span", "tag", p.category), el("strong", "", p.title));
+    meta.append(el("span", "tag", p.category), el("strong", "", p.title), el("span", "small text-muted", p.desc));
     if (p.date) meta.append(el("small", "", p.date));
     card.append(frame, meta);
     card.onclick = () => open(i);
-    return card;
+    col.append(card);
+    return col;
   }));
 
   status.textContent = visible.length
@@ -109,3 +111,16 @@ viewer.addEventListener("touchend", e => {
 search.addEventListener("input", () => { query = search.value; render(); });
 buildFilters();
 render();
+
+// Same footer year, hero slider and back-to-top as the main page
+document.getElementById("copyright-year").textContent = new Date().getFullYear();
+const heroSlides = document.querySelectorAll(".hero-slide");
+let heroIdx = 0;
+if (heroSlides.length > 1) setInterval(() => {
+  heroSlides[heroIdx].classList.remove("active");
+  heroIdx = (heroIdx + 1) % heroSlides.length;
+  heroSlides[heroIdx].classList.add("active");
+}, 4000);
+const topBtn = document.querySelector(".back-to-top");
+window.addEventListener("scroll", () => { topBtn.style.display = window.scrollY > 300 ? "block" : "none"; });
+topBtn.addEventListener("click", e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
