@@ -28,60 +28,7 @@ const photos = [
     fit: "cover",
     alt: "Group photo of DUET students during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
   }
-  {
-    src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
-    title: "Low-Carbon Concrete certificate",
-    desc: "ACI University certificate program, completed August 18, 2026.",
-    category: "Projects",
-    date: "Aug 2026",
-    fit: "contain",
-    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
-  },
-  {
-    src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
-    title: "Low-Carbon Concrete certificate",
-    desc: "ACI University certificate program, completed August 18, 2026.",
-    category: "Certificates",
-    date: "Aug 2026",
-    fit: "contain",
-    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
-  },
-  {
-    src: "assets/img/DND-Project-Site-Visit.webp",
-    title: "DND Project site visit",
-    desc: "Shimrail Pump Station, Dhaka–Narayanganj–Demra Project, BWDB.",
-    category: "Site visits",
-    date: "",
-    fit: "cover",
-    alt: "Group photo of DUET students during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
-  }
-{
-    src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
-    title: "Low-Carbon Concrete certificate",
-    desc: "ACI University certificate program, completed August 18, 2026.",
-    category: "Projects",
-    date: "Aug 2026",
-    fit: "contain",
-    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
-  },
-  {
-    src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
-    title: "Low-Carbon Concrete certificate",
-    desc: "ACI University certificate program, completed August 18, 2026.",
-    category: "Certificates",
-    date: "Aug 2026",
-    fit: "contain",
-    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
-  },
-  {
-    src: "assets/img/DND-Project-Site-Visit.webp",
-    title: "DND Project site visit",
-    desc: "Shimrail Pump Station, Dhaka–Narayanganj–Demra Project, BWDB.",
-    category: "Site visits",
-    date: "",
-    fit: "cover",
-    alt: "Group photo of DUET students during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
-  }
+  
 ];
 
 const $ = id => document.getElementById(id);
