@@ -1,7 +1,5 @@
-// Filter buttons appear in this order. Add a new name here to show its button even before it has photos.
 const categoryOrder = ["Projects", "Certificates", "Site visits"];
 
-// ADD NEW PHOTOS HERE: copy one block, change the values, keep the commas.
 const photos = [
   {
     src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
@@ -84,16 +82,6 @@ const photos = [
     fit: "cover",
     alt: "Group photo of DUET students during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
   }
-  // Project photo example: remove the // marks, add a comma after the block above, then edit the values.
-  // ,{
-  //   src: "assets/img/Beam-Casting-Lab.webp",
-  //   title: "Failure Behaviour of Beam",
-  //   desc: "Materials testing and beam casting, CED, DUET.",
-  //   category: "Projects",
-  //   date: "Jun 2026",
-  //   fit: "cover",
-  //   alt: "DUET students casting reinforced concrete beams in the Civil Engineering lab."
-  // }
 ];
 
 const $ = id => document.getElementById(id);
