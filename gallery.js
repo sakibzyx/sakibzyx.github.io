@@ -1,3 +1,6 @@
+// Filter buttons appear in this order. Add a new name here to show its button even before it has photos.
+const categoryOrder = ["Projects", "Certificates", "Site visits"];
+
 // ADD NEW PHOTOS HERE: copy one block, change the values, keep the commas.
 const photos = [
   {
@@ -18,6 +21,16 @@ const photos = [
     fit: "cover",
     alt: "Group photo of DUET students during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
   }
+  // Project photo example: remove the // marks, add a comma after the block above, then edit the values.
+  // ,{
+  //   src: "assets/img/Beam-Casting-Lab.webp",
+  //   title: "Failure Behaviour of Beam",
+  //   desc: "Materials testing and beam casting, CED, DUET.",
+  //   category: "Projects",
+  //   date: "Jun 2026",
+  //   fit: "cover",
+  //   alt: "DUET students casting reinforced concrete beams in the Civil Engineering lab."
+  // }
 ];
 
 const $ = id => document.getElementById(id);
@@ -33,7 +46,7 @@ function el(tag, cls, text) {
 }
 
 function buildFilters() {
-  const cats = ["All", ...new Set(photos.map(p => p.category))];
+  const cats = ["All", ...new Set([...categoryOrder, ...photos.map(p => p.category)])];
   filters.replaceChildren(...cats.map(c => {
     const count = c === "All" ? photos.length : photos.filter(p => p.category === c).length;
     const b = el("button", "chip", `${c} (${count})`);
@@ -79,7 +92,9 @@ function render() {
 
   status.textContent = visible.length
     ? `Showing ${visible.length} of ${photos.length} photos`
-    : "No photos match your search. Try another word or category.";
+    : (!query.trim() && activeCat !== "All")
+      ? `No photos in "${activeCat}" yet. They will appear here soon.`
+      : "No photos match your search. Try another word or category.";
 }
 
 function show(i) {
