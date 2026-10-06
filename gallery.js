@@ -7,6 +7,15 @@ const photos = [
     src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
     title: "Low-Carbon Concrete certificate",
     desc: "ACI University certificate program, completed August 18, 2026.",
+    category: "Projects",
+    date: "Aug 2026",
+    fit: "contain",
+    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
+  },
+  {
+    src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
+    title: "Low-Carbon Concrete certificate",
+    desc: "ACI University certificate program, completed August 18, 2026.",
     category: "Certificates",
     date: "Aug 2026",
     fit: "contain",
