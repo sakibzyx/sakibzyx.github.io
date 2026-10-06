@@ -1,61 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Md Sakibul Hasan</title>
-  <meta name="description" content="Gallery of Md Sakibul Hasan: certificates and site visits during Civil Engineering studies at DUET.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="gallery.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2c3e50" />
+    <title>Gallery | Md Sakibul Hasan</title>
+    <meta name="description" content="Gallery of Md Sakibul Hasan: certificates and site visits during Civil Engineering studies at DUET." />
+    <meta name="author" content="Md Sakibul Hasan" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://sakibzyx.github.io/gallery.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Md Sakibul Hasan" />
+    <meta property="og:url" content="https://sakibzyx.github.io/gallery.html" />
+    <meta property="og:title" content="Gallery | Md Sakibul Hasan" />
+    <meta property="og:description" content="Certificates and site visits from Md Sakibul Hasan's Civil Engineering journey at DUET." />
+    <meta property="og:image" content="https://sakibzyx.github.io/assets/img/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/webp" href="/assets/img/md-sakibul-hasan.webp" />
 
-<header class="top">
-  <a class="brand" href="index.html">Md Sakibul Hasan</a>
-  <nav aria-label="Main">
-    <a href="index.html#about">About</a>
-    <a href="index.html#education">Education</a>
-    <a href="index.html#experience">Experience</a>
-    <a href="index.html#activities">Activities</a>
-    <a href="gallery.html" aria-current="page">Gallery</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" /></noscript>
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
 
-<section class="hero">
-  <div class="wrap">
-    <h1>Gallery</h1>
-    <p>Certificates and site visits from my Civil Engineering journey at DUET.</p>
-  </div>
-</section>
+  <body>
+    <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
 
-<main class="wrap">
-  <div class="toolbar">
-    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
-    <input type="search" id="search" placeholder="Search photos" aria-label="Search photos">
-  </div>
-  <p class="status" id="status" aria-live="polite"></p>
-  <div class="grid" id="grid"></div>
-  <noscript><p class="status">Please enable JavaScript to view the gallery.</p></noscript>
-</main>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main Navigation">
+      <div class="container">
+        <div class="d-flex align-items-center gap-3">
+          <a class="navbar-brand d-flex align-items-center mb-0 me-0" href="index.html" aria-label="Home">
+            <img src="assets/img/md-sakibul-hasan.webp" height="36" width="36" style="object-fit: cover" alt="Md Sakibul Hasan Portfolio Logo" />
+          </a>
+          <a class="nav-cv-box" href="#" target="_blank" rel="noopener">CV</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link nav-box" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-box" href="index.html#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link nav-box" href="index.html#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link nav-box" href="index.html#activities">Activities</a></li>
+            <li class="nav-item"><a class="nav-link nav-box active" href="gallery.html" aria-current="page">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link nav-box" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<dialog id="viewer" aria-label="Photo viewer">
-  <button class="vbtn close" id="vclose" aria-label="Close">&times;</button>
-  <button class="vbtn prev" id="vprev" aria-label="Previous photo">&#8249;</button>
-  <button class="vbtn next" id="vnext" aria-label="Next photo">&#8250;</button>
-  <figure>
-    <img id="vimg" alt="">
-    <figcaption>
-      <strong id="vtitle"></strong>
-      <span id="vdesc"></span>
-      <small id="vcount"></small>
-    </figcaption>
-  </figure>
-</dialog>
+    <main id="main">
+      <header class="hero-section hero-small">
+        <div class="hero-slider" aria-hidden="true">
+          <div class="hero-slide active" style="background-image: linear-gradient(135deg, #16222a, #3a6073)"></div>
+          <div class="hero-slide" style="background-image: linear-gradient(135deg, #654ea3, #eaafc8)"></div>
+          <div class="hero-slide" style="background-image: linear-gradient(135deg, #0f2027, #203a43, #2c5364)"></div>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <h1 class="mb-2">Gallery</h1>
+          <p class="lead mb-0">Certificates and site visits from my Civil Engineering journey at DUET.</p>
+        </div>
+      </header>
 
-<footer>© 2026 Md Sakibul Hasan. All Rights Reserved.</footer>
-<script src="gallery.js"></script>
-</body>
+      <section class="py-5">
+        <div class="container">
+          <h2 class="section-title">Photos &amp; Documents</h2>
+          <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center">
+            <div class="d-flex flex-wrap gap-2" id="filters" role="group" aria-label="Filter by category"></div>
+            <input type="search" id="search" class="form-control" placeholder="Search photos" aria-label="Search photos" />
+          </div>
+          <p class="small text-muted mt-3 mb-3" id="status" aria-live="polite"></p>
+          <div class="row g-4" id="grid"></div>
+          <noscript><p class="text-muted">Please enable JavaScript to view the gallery.</p></noscript>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="viewer" aria-label="Photo viewer">
+      <button class="vbtn close" id="vclose" aria-label="Close">&times;</button>
+      <button class="vbtn prev" id="vprev" aria-label="Previous photo">&#8249;</button>
+      <button class="vbtn next" id="vnext" aria-label="Next photo">&#8250;</button>
+      <figure>
+        <img id="vimg" alt="" />
+        <figcaption>
+          <strong id="vtitle"></strong>
+          <span id="vdesc"></span>
+          <small id="vcount"></small>
+        </figcaption>
+      </figure>
+    </dialog>
+
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-0">&copy; <span id="copyright-year">2026</span> Md Sakibul Hasan. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Scroll back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="gallery.js"></script>
+  </body>
 </html>
