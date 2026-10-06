@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Md Sakibul Hasan</title>
+  <meta name="description" content="Gallery of Md Sakibul Hasan: certificates and site visits during Civil Engineering studies at DUET.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="index.html">Md Sakibul Hasan</a>
+  <nav aria-label="Main">
+    <a href="index.html#about">About</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#activities">Activities</a>
+    <a href="gallery.html" aria-current="page">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Gallery</h1>
+    <p>Certificates and site visits from my Civil Engineering journey at DUET.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="toolbar">
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+    <input type="search" id="search" placeholder="Search photos" aria-label="Search photos">
+  </div>
+  <p class="status" id="status" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <noscript><p class="status">Please enable JavaScript to view the gallery.</p></noscript>
+</main>
+
+<dialog id="viewer" aria-label="Photo viewer">
+  <button class="vbtn close" id="vclose" aria-label="Close">&times;</button>
+  <button class="vbtn prev" id="vprev" aria-label="Previous photo">&#8249;</button>
+  <button class="vbtn next" id="vnext" aria-label="Next photo">&#8250;</button>
+  <figure>
+    <img id="vimg" alt="">
+    <figcaption>
+      <strong id="vtitle"></strong>
+      <span id="vdesc"></span>
+      <small id="vcount"></small>
+    </figcaption>
+  </figure>
+</dialog>
+
+<footer>© 2026 Md Sakibul Hasan. All Rights Reserved.</footer>
+<script src="gallery.js"></script>
+</body>
+</html>
