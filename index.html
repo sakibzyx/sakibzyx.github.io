@@ -210,6 +210,65 @@
 
       .back-to-top { position: fixed; bottom: 24px; right: 24px; width: 46px; height: 46px; background-color: var(--secondary-color); color: #fff; border-radius: 50%; text-align: center; line-height: 46px; font-size: 20px; text-decoration: none; display: none; z-index: 1000; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
       .back-to-top:hover { color: #fff; background-color: var(--primary-color); }
+
+      /* Floating side navigation */
+      .side-nav {
+        position: fixed;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+      .side-nav a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: var(--secondary-color);
+        font-size: 1.05rem;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .side-nav a:hover,
+      .side-nav a:focus-visible,
+      .side-nav a.active {
+        background-color: var(--secondary-color);
+        color: #fff;
+      }
+      .side-nav a::after {
+        content: attr(data-label);
+        position: absolute;
+        right: 52px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 4px 10px;
+        background: var(--primary-color);
+        color: #fff;
+        font-size: 0.78rem;
+        white-space: nowrap;
+        border-radius: 4px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+      }
+      .side-nav a:hover::after,
+      .side-nav a:focus-visible::after { opacity: 1; }
+
+      @media (max-width: 575.98px) {
+        .side-nav { right: 6px; padding: 4px; }
+        .side-nav a { width: 34px; height: 34px; font-size: 0.95rem; }
+        .side-nav a::after { display: none; }
+        .back-to-top { right: 56px; }
+      }
     </style>
   </head>
 
@@ -237,6 +296,7 @@
             <li class="nav-item"><a class="nav-link nav-box" href="#experience">Experience</a></li>
             <li class="nav-item"><a class="nav-link nav-box" href="#activities">Activities</a></li>
             <li class="nav-item"><a class="nav-link nav-box" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link nav-box" href="https://sakibzyx.github.io/gallery">Gallery</a></li>
           </ul>
         </div>
       </div>
@@ -564,6 +624,19 @@
       </div>
     </footer>
 
+    <!-- Floating side navigation -->
+    <nav class="side-nav" aria-label="Quick section navigation">
+      <a href="#about" data-label="About" aria-label="About"><i class="bi bi-person"></i></a>
+      <a href="#education" data-label="Education" aria-label="Education"><i class="bi bi-mortarboard"></i></a>
+      <a href="#skills" data-label="Skills" aria-label="Skills"><i class="bi bi-tools"></i></a>
+      <a href="#experience" data-label="Experience" aria-label="Experience"><i class="bi bi-briefcase"></i></a>
+      <a href="#certifications" data-label="Certifications" aria-label="Certifications"><i class="bi bi-award"></i></a>
+      <a href="#memberships" data-label="Membership" aria-label="Membership"><i class="bi bi-people"></i></a>
+      <a href="#activities" data-label="Activities" aria-label="Activities"><i class="bi bi-calendar-event"></i></a>
+      <a href="#contact" data-label="Contact" aria-label="Contact"><i class="bi bi-envelope"></i></a>
+      <a href="https://sakibzyx.github.io/gallery" data-label="Gallery" aria-label="Gallery"><i class="bi bi-images"></i></a>
+    </nav>
+
     <a href="#" class="back-to-top" aria-label="Scroll back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -628,6 +701,19 @@
 
       window.addEventListener("scroll", updateActiveLink);
       updateActiveLink();
+
+      // Side nav active highlight
+      const sideLinks = [...document.querySelectorAll(".side-nav a")].filter((a) => a.hash);
+      const sideSections = sideLinks.map((a) => document.getElementById(a.hash.slice(1))).filter(Boolean);
+
+      function updateSideNav() {
+        const y = window.scrollY + 140;
+        let current = "";
+        sideSections.forEach((sec) => { if (sec.offsetTop <= y) current = sec.id; });
+        sideLinks.forEach((a) => a.classList.toggle("active", a.hash === "#" + current));
+      }
+      window.addEventListener("scroll", updateSideNav);
+      updateSideNav();
 
       // Back to top
       const backToTopButton = document.querySelector(".back-to-top");
