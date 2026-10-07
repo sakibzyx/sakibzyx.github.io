@@ -11,6 +11,15 @@ const photos = [
     alt: "Civil Engineering students conducting a two-point loading test on a RC Beam using a UTM as part of the Beam Failure Pattern Project under the Mechanics of Solids–II course."
   },
   {
+    src: "assets/img/DND-Project-Site-Visit.webp",
+    title: "DND Project site visit",
+    desc: "Group photo of Civil Engineering Department students from DUET during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB).",
+    category: "Site visits",
+    date: "Aug 22, 2026",
+    fit: "contain",
+    alt: "Group photo of Civil Engineering Department students from DUET during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
+  },
+  {
     src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
     title: "Low-Carbon Concrete certificate",
     desc: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026.",
@@ -20,13 +29,13 @@ const photos = [
     alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
   },
   {
-    src: "assets/img/DND-Project-Site-Visit.webp",
-    title: "DND Project site visit",
-    desc: "Group photo of Civil Engineering Department students from DUET during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB).",
+    src: "assets/img/Certificate-Basic-Programming-with-Python.webp",
+    title: "Basic Programming with Python Certificate",
+    desc: "Certificate awarded to Md Sakibul Hasan for successfully completing the Basic Programming with Python training from April to May 2026 under the EDGE Project of Bangladesh Computer Council and ICT Division.",
     category: "Site visits",
-    date: "Aug 22, 2026",
+    date: "Jul 19, 2026",
     fit: "contain",
-    alt: "Group photo of Civil Engineering Department students from DUET during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
+    alt: "Certificate awarded to Md Sakibul Hasan for successfully completing the Basic Programming with Python training from April to May 2026 under the EDGE Project of Bangladesh Computer Council and ICT Division."
   }
   
 ];
