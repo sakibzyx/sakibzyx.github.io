@@ -282,7 +282,7 @@
           <a class="navbar-brand d-flex align-items-center mb-0 me-0" href="https://sakibzyx.github.io/" aria-label="Home">
             <img src="assets/img/md-sakibul-hasan.webp" height="36" width="36" style="object-fit: cover" alt="Md Sakibul Hasan Portfolio Logo" />
           </a>
-          <a class="nav-cv-box" href="#" target="_blank" rel="noopener">CV</a>
+          <a class="nav-cv-box" href="https://sakibzyx.github.io/cv/index" target="_blank" rel="noopener">CV</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -625,15 +625,9 @@
     </footer>
 
     <!-- Floating side navigation -->
-    <nav class="side-nav" aria-label="Quick section navigation">
-      <a href="#about" data-label="About" aria-label="About"><i class="bi bi-person"></i></a>
-      <a href="#education" data-label="Education" aria-label="Education"><i class="bi bi-mortarboard"></i></a>
-      <a href="#skills" data-label="Skills" aria-label="Skills"><i class="bi bi-tools"></i></a>
-      <a href="#experience" data-label="Experience" aria-label="Experience"><i class="bi bi-briefcase"></i></a>
-      <a href="#certifications" data-label="Certifications" aria-label="Certifications"><i class="bi bi-award"></i></a>
-      <a href="#memberships" data-label="Membership" aria-label="Membership"><i class="bi bi-people"></i></a>
-      <a href="#activities" data-label="Activities" aria-label="Activities"><i class="bi bi-calendar-event"></i></a>
-      <a href="#contact" data-label="Contact" aria-label="Contact"><i class="bi bi-envelope"></i></a>
+    <nav class="side-nav" aria-label="Quick navigation">
+      <a href="#" data-label="Home" aria-label="Home"><i class="bi bi-house"></i></a>
+      <a href="https://sakibzyx.github.io/cv/index" data-label="CV" aria-label="CV"><i class="bi bi-file-earmark-person"></i></a>
       <a href="https://sakibzyx.github.io/gallery" data-label="Gallery" aria-label="Gallery"><i class="bi bi-images"></i></a>
     </nav>
 
@@ -702,18 +696,6 @@
       window.addEventListener("scroll", updateActiveLink);
       updateActiveLink();
 
-      // Side nav active highlight
-      const sideLinks = [...document.querySelectorAll(".side-nav a")].filter((a) => a.hash);
-      const sideSections = sideLinks.map((a) => document.getElementById(a.hash.slice(1))).filter(Boolean);
-
-      function updateSideNav() {
-        const y = window.scrollY + 140;
-        let current = "";
-        sideSections.forEach((sec) => { if (sec.offsetTop <= y) current = sec.id; });
-        sideLinks.forEach((a) => a.classList.toggle("active", a.hash === "#" + current));
-      }
-      window.addEventListener("scroll", updateSideNav);
-      updateSideNav();
 
       // Back to top
       const backToTopButton = document.querySelector(".back-to-top");
