@@ -2,13 +2,13 @@ const categoryOrder = ["Projects", "Certificates", "Site visits"];
 
 const photos = [
   {
-    src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
-    title: "Low-Carbon Concrete certificate",
-    desc: "ACI University certificate program, completed August 18, 2026.",
+    src: "assets/img/RC-Beam-Failure-Pattern-Project.webp",
+    title: "RC Beam Failure Pattern Project",
+    desc: "Civil Engineering students conducting a two-point loading test on a RC Beam using a UTM as part of the Beam Failure Pattern Project under the Mechanics of Solids–II course.",
     category: "Projects",
-    date: "Aug 2026",
+    date: "Aug 30, 2026",
     fit: "contain",
-    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
+    alt: "Civil Engineering students conducting a two-point loading test on a RC Beam using a UTM as part of the Beam Failure Pattern Project under the Mechanics of Solids–II course."
   },
   {
     src: "assets/img/Certificate-Low-Carbon%20Concrete.webp",
