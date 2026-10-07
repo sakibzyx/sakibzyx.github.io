@@ -29,10 +29,19 @@ const photos = [
     alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Low-Carbon Concrete: Fundamentals, Materials, and Innovations program on August 18, 2026."
   },
   {
+    src: "assets/img/Slab-Beam-Reinforcement-Inspection-Bijoy24-Hall-DUET.webp",
+    title: "Slab & Beam Reinforcement Inspection – Bijoy 24 Hall, DUET",
+    desc: "We are inspecting slab and beam reinforcement, including hooks, bends, corner reinforcement, and other reinforcement detailing during the upward extension work of Bijoy 24 Hall at DUET.",
+    category: "Site visits",
+    date: "Jul 22, 2026",
+    fit: "contain",
+    alt: "We are inspecting slab and beam reinforcement, including hooks, bends, corner reinforcement, and other reinforcement detailing during the upward extension work of Bijoy 24 Hall at DUET."
+  },
+  {
     src: "assets/img/Certificate-Basic-Programming-with-Python.webp",
     title: "Basic Programming with Python Certificate",
     desc: "Certificate awarded to Md Sakibul Hasan for successfully completing the Basic Programming with Python training from April to May 2026 under the EDGE Project of Bangladesh Computer Council and ICT Division.",
-    category: "Site visits",
+    category: "Certificates",
     date: "Jul 19, 2026",
     fit: "contain",
     alt: "Certificate awarded to Md Sakibul Hasan for successfully completing the Basic Programming with Python training from April to May 2026 under the EDGE Project of Bangladesh Computer Council and ICT Division."
