@@ -22,11 +22,11 @@ const photos = [
   {
     src: "assets/img/DND-Project-Site-Visit.webp",
     title: "DND Project site visit",
-    desc: "Shimrail Pump Station, Dhaka–Narayanganj–Demra Project, BWDB.",
+    desc: "Group photo of Civil Engineering Department students from DUET during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB).",
     category: "Site visits",
     date: "",
     fit: "cover",
-    alt: "Group photo of DUET students during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
+    alt: "Group photo of Civil Engineering Department students from DUET during a site visit to Shimrail Pump Station under the Dhaka–Narayanganj–Demra (DND) Project of the Bangladesh Water Development Board (BWDB)."
   }
   
 ];
