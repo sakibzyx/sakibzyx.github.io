@@ -41,11 +41,11 @@ const photos = [
   {
     src: "/assets/img/Certificate-Basic-Programming-with-Python.webp",
     title: "Basic Programming with Python Certificate",
-    desc: "Certificate awarded to Md Sakibul Hasan for successfully completing the Basic Programming with Python training from April to May 2026 under the EDGE Project of Bangladesh Computer Council and ICT Division.",
+    desc: "Certificate awarded to Md Sakibul Hasan for successfully completing the 66-hour Basic Programming with Python training under the EDGE-CSE DUET DSTS Project at Dhaka University of Engineering & Technology (DUET).",
     category: "Certificates",
     date: "Jul 19, 2026",
     fit: "contain",
-    alt: "Certificate awarded to Md Sakibul Hasan for successfully completing the Basic Programming with Python training from April to May 2026 under the EDGE Project of Bangladesh Computer Council and ICT Division."
+    alt: "Certificate awarded to Md Sakibul Hasan for successfully completing the 66-hour Basic Programming with Python training under the EDGE-CSE DUET DSTS Project at Dhaka University of Engineering & Technology (DUET)."
   }
 ];
 
