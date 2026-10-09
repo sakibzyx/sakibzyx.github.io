@@ -46,6 +46,15 @@ const photos = [
     date: "Jul 19, 2026",
     fit: "contain",
     alt: "Certificate awarded to Md Sakibul Hasan for successfully completing the 66-hour Basic Programming with Python training under the EDGE-CSE DUET DSTS Project at Dhaka University of Engineering & Technology (DUET)."
+  },
+  {
+    src: "assets/img/Certificate-e-Commerce-Training.webp",
+    title: "e-Commerce Training Certificate",
+    desc: "Certificate awarded to Md. Sakibul Hasan for successfully completing the e-Commerce Training under the FTFL Training Program of the LICT Project, organized by the e-Commerce Association of Bangladesh (e-CAB) under Bangladesh Computer Council and ICT Division.",
+    category: "Certificates",
+    date: "Nov 01, 2020",
+    fit: "contain",
+    alt: "Certificate awarded to Md. Sakibul Hasan for successfully completing the e-Commerce Training under the FTFL Training Program of the LICT Project, organized by the e-Commerce Association of Bangladesh (e-CAB) under Bangladesh Computer Council and ICT Division."
   }
 ];
 
