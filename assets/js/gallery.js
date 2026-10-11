@@ -1,7 +1,16 @@
-const categoryOrder = ["Projects", "Certificates", "Site visits"];
+const categoryOrder = ["Certificates", "Projects", "Site visits"];
 
 // To add a photo, copy one block, change the values, and add a comma between blocks.
 const photos = [
+  {
+    src: "assets/img/Fundamentals-of-Concrete-and-Materials-certificate.webp",
+    title: "Fundamentals of Concrete and Materials Certificate",
+    desc: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Fundamentals of Concrete and Materials program on October 10, 2026.",
+    category: "Certificates",
+    date: "Oct 10, 2026",
+    fit: "contain",
+    alt: "ACI University Certificate Program awarded to Md Sakibul Hasan for successfully completing the Fundamentals of Concrete and Materials program on October 10, 2026."
+  },
   {
     src: "/assets/img/RC-Beam-Failure-Pattern-Project.webp",
     title: "RC Beam Failure Pattern Project",
