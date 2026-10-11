@@ -1,6 +1,5 @@
 const categoryOrder = ["Certificates", "Projects", "Site visits"];
 
-// To add a photo, copy one block, change the values, and add a comma between blocks.
 const photos = [
   {
     src: "assets/img/Fundamentals-of-Concrete-and-Materials-certificate.webp",
